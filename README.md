@@ -1,1 +1,1 @@
-"# Introducci¢n a la Programaci¢n WEB - Tom s Oliva - Primera actividad - UAI" 
+"Tomas Oliva - UAI - Readme Modificado en RAMA Paralela - Introduccion a la Programacion WEB" 
