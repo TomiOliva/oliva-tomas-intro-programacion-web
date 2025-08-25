@@ -1,1 +1,4 @@
-"# Introducci¢n a la Programaci¢n WEB - Tom†s Oliva - Primera actividad - UAI" 
+# Introducci√≥n a la Programaci√≥n WEB - Tom√°s Oliva
+## Primera actividad - UAI
+
+Este README fue modificado en otra RAMA para cumplir la consigna.
