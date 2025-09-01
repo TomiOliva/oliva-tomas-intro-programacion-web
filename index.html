@@ -3,57 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="description" content="Producción agrícola argentina alcanza máximos históricos gracias a las lluvias y perspectivas de cosecha.">
   <meta name="author" content="Tomás Oliva - Universidad Abierta Interamericana (UAI) - IPW">
   <meta name="keywords" content="Agricultura, Argentina, Trigo, Soja, Maíz, Producción agrícola">
-
-
   <title>Producción agrícola argentina cerca de máximos históricos gracias a las lluvias</title>
 </head>
 <body>
   <header>
-
-
     <nav>
-  <ul>
-    <li><a href="#precipitaciones">Récord de precipitaciones</a></li>
-    <li><a href="#cosecha">Perspectivas de cosecha</a></li>
-    <li><a href="#riesgos">Riesgos asociados</a></li>
-    <li><a href="#internacional">Escenario internacional</a></li>
-  </ul>
-</nav>
-
-
+      <!-- Hago este navbar viendo que vimos los conenicos en clase de listas-->
+      <ul>
+        <li><a href="#">Récord de precipitaciones</a></li>
+        <li><a href="#">Perspectivas de cosecha</a></li>
+        <li><a href="#">Riesgos asociados</a></li>
+        <li><a href="#">Escenario internacional</a></li>
+        <li><a href="#">Suscripción</a></li>
+      </ul>
+    </nav>
     <h1>Producción agrícola argentina podría rondar máximos históricos gracias a lluvias</h1>
     <p><small>20 de agosto de 2025 – Bolsa de Comercio de Rosario</small></p>
   </header>
 
   <main>
     <article>
-
-      <section id="precipitaciones">
-       <h2>Récord de precipitaciones en la zona núcleo</h2>
+      <section>
+        <h2>Récord de precipitaciones en la zona núcleo</h2>
         <p>Las lluvias de agosto alcanzaron niveles históricos para esa región, con acumulados de entre 50 y 150 mm, lo que garantiza reservas hídricas óptimas para los cultivos ya sembrados de trigo y para la próxima siembra de soja y maíz.</p>
       </section>
 
-
-      <section id="cosecha">
-
+      <section>
         <h2>Perspectivas de cosecha</h2>
-        <p>La Bolsa de Comercio de Rosario estima que la producción de trigo para la campaña 2025/26 tendrá un piso de 20 millones de toneladas. En temporadas recientes, la producción alcanzó 49,5 millones de toneladas de soja y 48,5 millones de toneladas de maíz, aunque estas cifras aún no se actualizaron para la nueva campaña.</p>
+        <p>La Bolsa de Comercio de Rosario estima que la producción de trigo para la campaña 2025/26 tendrá un piso de 20 millones de toneladas. En temporadas recientes, la producción alcanzó <strong>49,5 millones de toneladas</strong> de soja y <em>48,5 millones de toneladas</em> de maíz, aunque estas cifras aún no se actualizaron para la nueva campaña.</p>
       </section>
 
-
-      <section id="riesgos">
-
+      <section>
         <h2>Riesgos asociados</h2>
         <p>Pese al potencial productivo elevado, la BCR alertó sobre posibles complicaciones sanitarias y logísticas derivadas del exceso de humedad.</p>
       </section>
 
-      <section id="internacional">
+      <section>
         <h2>Argentina en el escenario internacional</h2>
-        <p>El país mantienee su rol clave en el comercio mundial: es el mayor exportador de aceite y harina de soja, el tercero de maíz y un importante proveedor de trigo.</p>
+        <p>El país mantiene su rol clave en el comercio mundial: es el mayor exportador de aceite y harina de soja, el tercero de maíz y un importante proveedor de trigo. <a href="https://www.reuters.com" target="_blank">Fuente externa</a>.</p>
+      </section>
+
+      <section>
+              <!-- Agrego formulario usando etiquetas 'form', 'label', 'button e'input'-->
+        <h2>Suscribite para más noticias</h2>
+        <form action="#" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" required>
+          
+          <label for="email">Correo electrónico:</label>
+          <input type="email" name="email" required>
+          
+          <button type="submit">Suscribirse</button>
+        </form>
       </section>
     </article>
   </main>
