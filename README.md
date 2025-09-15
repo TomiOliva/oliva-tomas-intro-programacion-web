@@ -1,7 +1,7 @@
 ﻿# Introducción a la Programación Web - Tomás Oliva
  ## GitHub Pages
- Clickeá en el siguiente enlace para ver mi trabajo:
-[https://tomioliva.github.io/oliva-tomas-intro-programacion-web/](Enlace)
+ Eenlace para ver mi trabajo:
+https://tomioliva.github.io/oliva-tomas-intro-programacion-web/
 ____________________________________________________________________________________
 
 ## Primera actividad - UAI
