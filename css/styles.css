@@ -1,0 +1,319 @@
+﻿body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header {
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #f7f7f7;
+}
+
+.topbar {
+  padding: 18px 0 12px;
+  position: relative;
+}
+
+.brand {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: #111;
+  display: inline-block;
+}
+
+.timestamp {
+  display: block;
+  margin-top: 6px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.menu-button {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  height: 3px;
+  background-color: #111;
+  margin-bottom: 4px;
+}
+
+.menu-button span:last-child {
+  margin-bottom: 0;
+}
+
+.nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.primary-nav {
+  display: none;
+  padding-bottom: 12px;
+}
+
+.primary-nav ul {
+  list-style: none;
+}
+
+.primary-nav li {
+  border-top: 1px solid #e5e5e5;
+}
+
+.primary-nav li:first-child {
+  border-top: none;
+}
+
+.primary-nav a {
+  display: block;
+  padding: 10px 0;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-nav a:hover {
+  color: #0a6b2d;
+}
+
+.nav-toggle:checked ~ .primary-nav {
+  display: block;
+}
+
+.headline {
+  padding: 20px 0 30px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ff6a00;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.byline {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 30px 0 40px;
+}
+
+.hero-image {
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-image figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+section + section {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+blockquote {
+  border-left: 4px solid #ff6a00;
+  padding-left: 14px;
+  margin: 22px 0;
+  font-style: italic;
+  color: #333;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+.signup form {
+  margin-top: 10px;
+}
+
+.signup label {
+  font-weight: bold;
+  display: block;
+  margin-top: 12px;
+}
+
+.signup input,
+.signup button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.signup button {
+  background-color: #0a6b2d;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup button:hover {
+  background-color: #084b20;
+}
+
+.sidebar {
+  margin-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}
+
+.sidebar h2 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #0a6b2d;
+}
+
+footer {
+  border-top: 1px solid #dcdcdc;
+  background-color: #f7f7f7;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media (min-width: 600px) {
+  .menu-button {
+    display: none;
+  }
+
+  .timestamp {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+
+  .primary-nav {
+    display: block;
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 0 14px;
+  }
+
+  .primary-nav ul {
+    text-align: left;
+  }
+
+  .primary-nav li {
+    display: inline-block;
+    border-top: none;
+    margin-right: 18px;
+  }
+
+  .primary-nav li:last-child {
+    margin-right: 0;
+  }
+
+  .primary-nav a {
+    padding: 0;
+  }
+
+  .headline {
+    padding-bottom: 36px;
+  }
+}
+
+@media (min-width: 900px) {
+  .layout::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .content {
+    width: 65%;
+    float: left;
+  }
+
+  .sidebar {
+    width: 30%;
+    float: right;
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+}
