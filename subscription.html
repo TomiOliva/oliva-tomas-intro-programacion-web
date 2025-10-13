@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Suscripción — Reuters</title>
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/subscription.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">EL DIARIO Reuters</a>
+      <span class="date">Lun, 13 Oct 2025</span>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="hamburger" aria-label="Abrir menú">☰</label>
+
+      <nav class="site-nav" aria-label="Secciones">
+        <a href="index.html">Inicio</a>
+        <a href="#">Política</a>
+        <a href="#">Economía</a>
+        <a href="#">Deportes</a>
+        <a href="#">Cultura</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="banner">
+      <img src="img/intro-pweb.jpg" alt="Portada del diario con imagen destacada">
+    </section>
+
+    <section class="subscription">
+      <h1 id="helloTitle">HOLA</h1>
+
+      <form id="subForm" novalidate>
+        <div class="form-grid">
+          <div class="col">
+            <label>Nombre completo
+              <input type="text" id="fullName" name="fullName" placeholder="Tomás Oliva"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Email
+              <input type="email" id="email" name="email" placeholder="introproweb@mail.com"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Contraseña
+              <input type="password" id="pass" name="pass" placeholder="Mín. 8, letras y números"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Repetir contraseña
+              <input type="password" id="pass2" name="pass2"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Edad
+              <input type="number" id="age" name="age" min="0" max="120" placeholder="18+"/>
+              <small class="error"></small>
+            </label>
+          </div>
+
+          <div class="col">
+            <label>Teléfono
+              <input type="text" id="phone" name="phone" placeholder="Solo dígitos, 7+"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Dirección
+              <input type="text" id="address" name="address" placeholder="Avenida siempre viva"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Ciudad
+              <input type="text" id="city" name="city"/>
+              <small class="error"></small>
+            </label>
+
+            <label>Código postal
+              <input type="text" id="zip" name="zip"/>
+              <small class="error"></small>
+            </label>
+
+            <label>DNI
+              <input type="text" id="dni" name="dni" placeholder="7 u 8 dígitos"/>
+              <small class="error"></small>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bar">
+      <small>© 2025 El Diario Reuters - Tomás Oliva</small>
+    </div>
+  </footer>
+
+  <script src="js/subscription.js"></script>
+</body>
+</html>
