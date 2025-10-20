@@ -276,67 +276,59 @@ $("#subForm").addEventListener("submit", function (e) {
     return;
   }
 
-  var formData = {
-    fullName: $("#fullName").value.trim(),
-    email: $("#email").value.trim(),
-    password: $("#pass").value,
-    age: $("#age").value,
-    phone: $("#phone").value.trim(),
-    address: $("#address").value.trim(),
-    city: $("#city").value.trim(),
-    zip: $("#zip").value.trim(),
-    dni: $("#dni").value.trim()
-  };
+// Construir objeto para enviar
+var formData = {
+  name: $("#fullName").value.trim(),
+  email: $("#email").value.trim(),
+  address: $("#address").value.trim(),
+  password: $("#pass").value,
+  age: $("#age").value,
+  telephone: $("#phone").value.trim(),
+  city: $("#city").value.trim(),
+  postalcode: $("#zip").value.trim(),
+  dni: $("#dni").value.trim()
+};
 
-  var baseUrl = "https://jsonplaceholder.typicode.com/posts";
-  var params = new URLSearchParams(formData).toString();
-  var url = baseUrl + "?" + params;
-
-  fetch(url, {
-    method: "GET"
+// Enviar datos mediante POST (no GET)
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(formData)
+})
+  .then(function (response) {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("Error en la solicitud: " + response.status);
+    }
   })
-    .then(function (response) {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("Error en la solicitud: " + response.status);
-      }
-    })
-    .then(function (data) {
-      guardarEnLocalStorage(formData);
-      
-      var contenidoModal = "<p><strong>¡Suscripción exitosa!</strong></p>";
-      contenidoModal += "<p>Datos recibidos del servidor:</p>";
-      contenidoModal += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
-      contenidoModal += "<hr>";
-      contenidoModal += "<p><strong>Datos enviados:</strong></p>";
-      contenidoModal += "<p>Nombre: " + formData.fullName + "</p>";
-      contenidoModal += "<p>Email: " + formData.email + "</p>";
-      contenidoModal += "<p>Edad: " + formData.age + "</p>";
-      contenidoModal += "<p>Teléfono: " + formData.phone + "</p>";
-      contenidoModal += "<p>Dirección: " + formData.address + "</p>";
-      contenidoModal += "<p>Ciudad: " + formData.city + "</p>";
-      contenidoModal += "<p>Código Postal: " + formData.zip + "</p>";
-      contenidoModal += "<p>DNI: " + formData.dni + "</p>";
-      
-      mostrarModal("Suscripción Exitosa", contenidoModal);
-      
-      for (var i = 0; i < campos.length; i++) {
-        var campo = $("#" + campos[i].id);
-        campo.value = "";
-        limpiarError(campo);
-      }
-      $("#pass").value = "";
-      $("#pass2").value = "";
-      helloTitle.textContent = "HOLA";
-    })
-    .catch(function (error) {
-      var contenidoError = "<p><strong>Error al enviar la suscripción</strong></p>";
-      contenidoError += "<p>" + error.message + "</p>";
-      contenidoError += "<p>Por favor, intente nuevamente.</p>";
-      
-      mostrarModal("Error", contenidoError);
-    });
+  .then(function (data) {
+    // Éxito - data contiene TUS datos con un id agregado
+    guardarEnLocalStorage(formData);
+    
+    var contenidoModal = "<p><strong>Successful Subscription! :)</strong></p>";
+    contenidoModal += "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    
+    mostrarModal("Suscripción Exitosa", contenidoModal);
+    
+    // Limpiar formulario
+    for (var i = 0; i < campos.length; i++) {
+      var campo = $("#" + campos[i].id);
+      campo.value = "";
+      limpiarError(campo);
+    }
+    $("#pass").value = "";
+    $("#pass2").value = "";
+    helloTitle.textContent = "HOLA";
+  })
+  .catch(function (error) {
+    var contenidoError = "<p><strong>Error al enviar la suscripción</strong></p>";
+    contenidoError += "<p>" + error.message + "</p>";
+    
+    mostrarModal("Error", contenidoError);
+  });
 });
 
 
